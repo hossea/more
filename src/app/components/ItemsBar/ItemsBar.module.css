@@ -1,0 +1,101 @@
+.itemsBar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: #ffffff; 
+    border: 2px solid #e2dede;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+    height: 50vh;
+    position: relative;
+    transition: border-color 0.3s ease;
+  }
+  
+  .card:hover {
+    border-color: rgb(248, 141, 0);
+  }
+  
+  .imageSlider {
+    position: relative;
+    width: 100%;
+    height: 60%; 
+    overflow: hidden;
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .sliderButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+    cursor: pointer;
+    display: none; 
+  }
+
+  
+  .prevButton {
+    left: 10px;
+  }
+  
+  .nextButton {
+    right: 10px;
+  }
+  
+  .card:hover .sliderButton {
+    display: block;
+  }
+  
+  .name {
+    font-size: 1.6rem;
+    margin: 5px 0;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+  }
+  
+  .timePosted {
+    font-size: 0.75rem;
+    color: rgb(243, 7, 7);
+    margin-bottom: 5px;
+  }
+  
+  .separator {
+    border: none;
+    border-top: 1px solid #d3d1d1;
+    margin: 5px 0;
+  }
+  
+  .cost {
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 5px;
+  }
+  
+  .poster {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    color: rgb(238, 17, 17);
+  }
+  
+  .icon {
+    margin-right: 5px;
+  }
+  
+  

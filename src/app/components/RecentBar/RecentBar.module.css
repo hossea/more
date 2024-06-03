@@ -1,0 +1,48 @@
+.recentBar {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heading {
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    text-align: center;
+    color: #000000;
+
+  }
+  
+  .adList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .adItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .adItem:last-child {
+    border-bottom: none;
+  }
+  
+  .adTitle {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .adTime {
+    font-size: 0.875rem;
+    color: #999;
+  }
+  

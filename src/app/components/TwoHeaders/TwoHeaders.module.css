@@ -1,0 +1,19 @@
+.container {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  
+  .smallHeader {
+    font-size: 24px; 
+    color: #f00505; 
+    margin-left: 40px;
+  }
+  
+  .bigHeader {
+    font-size: 56px; 
+    color: #000000; 
+    margin-left: 40px;
+    font-weight: 700;
+    font-family: sans-serif;
+  }
+  
