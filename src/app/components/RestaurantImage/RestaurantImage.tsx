@@ -61,11 +61,12 @@ const RestaurantImage: React.FC<ItemsBarProps> = ({ items = [] }) => {
               {item.images.length > 0 && (
                 <>
                   <Image
-                    src={`/images/${item.images[currentSlide[item.id] || 0]}`}
+                    src={item.images[currentSlide[item.id] || 0]}
                     alt={item.name}
                     className={styles.image}
                     width={300}
                     height={200}
+                    priority
                   />
                   <button
                     className={`${styles.sliderButton} ${styles.prevButton}`}

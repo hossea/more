@@ -1,156 +1,214 @@
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    background-color: #b8b6b6;
-    padding: 1rem;
-    width: 350px;
-    height: 370vh;
-    margin: 20px;
-    border-radius: 10px;
-  }
-  .header {
-    font-size: 1.7rem;
-    margin-bottom: 1rem;
-  }
-  .subheader {
-    font-size: 1.28rem;
-    margin-bottom: 0.5rem;
-  }
-  .dropdownContainer {
-    margin-bottom: 0.8rem;
-  }
-  .searchContainer {
-    position: relative;
-    margin-bottom: 1rem;
-  }
-  .searchInput {
-    width: 100%;
-    padding: 0.5rem;
-    padding-left: 2rem;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-  }
-  .searchIcon {
-    position: absolute;
-    top: 50%;
-    left: 0.5rem;
-    transform: translateY(-50%);
-    color: #f76300;
-  }
-  .horizontalLine {
-    border: 2px solid;
-    height: 1px;
-    background: #ffffff;
-    margin: 1rem 0;
-  }
-  .gridContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-    margin-bottom: 1rem; 
-  }
-  .gridItem {
-    display: flex;
-    flex-direction: column;
-  }
-  .dropdownButton {
-    background-color: #fff;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-  }
-  .dropdownButton:hover {
-    background-color: #f0f0f0;
-  }
-  .button {
-    background-color: #fff;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-  }
-  .button:hover {
-    background-color: #f0f0f0;
-  }
-  .gridcontainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f6f6;
+  padding: 1rem;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin: 20px;
+  border-radius: 10px;
 }
 .header {
-    font-size: 28px;
-    margin-bottom: 20px;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
 }
 .subheader {
-    font-size: 18px;
-    margin-bottom: 10px;
+  font-size: 1.28rem;
+  margin-bottom: 0.5rem;
 }
-.dropdownContainer, .searchContainer, .gridContainer {
-    margin-bottom: 20px;
+.dropdownContainer {
+  margin-bottom: 0.8rem;
 }
-.dropdownButton, .searchInput {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+.searchContainer {
+  position: relative;
+  margin-bottom: 1rem;
 }
 .searchInput {
-    padding-right: 40px;
+  width: 100%;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
 }
 .searchIcon {
-    position: relative;
-    top: -30px;
-    left: 90%;
-    color: #888;
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  color: #f76300;
 }
 .horizontalLine {
-    border: 4px solid #ffffff;
-    margin: 20px 0;
+  border: 2px solid;
+  height: 1px;
+  background: #ffffff;
+  margin: 1rem 0;
 }
-.thickLine {
-    border-width: 5px;
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1rem; 
+}
+.gridItem {
+  display: flex;
+  flex-direction: column;
+}
+.dropdownButton {
+  background-color: #fff;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.dropdownButton:hover {
+  background-color: #f0f0f0;
 }
 .button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007BFF;
-    color: #fff;
-    cursor: pointer;
+  background-color: #fff;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
 }
 .button:hover {
-    background-color: #ff8a05;
+  background-color: #f0f0f0;
+}
+.gridcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.header {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.subheader {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.dropdownContainer, .searchContainer, .gridContainer {
+  margin-bottom: 20px;
+}
+.dropdownButton, .searchInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.searchInput {
+  padding-right: 40px;
+}
+.searchIcon {
+  position: relative;
+  top: -30px;
+  left: 90%;
+  color: #888;
+}
+.horizontalLine {
+  border: 4px solid #ffffff;
+  margin: 20px 0;
+}
+.thickLine {
+  border-width: 5px;
+}
+.button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #ff8a05;
 }
 .listingLinks {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
 }
 .listingLinks li {
-    margin-bottom: 10px;
-    margin-left: 20px;
+  margin-bottom: 10px;
+  margin-left: 20px;
 }
 .listingLinks a {
-    text-decoration: none;
-    color: #ff7b00;
-    font-weight: 700;
+  text-decoration: none;
+  color: #ff7b00;
+  font-weight: 700;
 }
 .listingLinks a:hover {
-    text-decoration: underline 2px rgb(255, 145, 0);
+  text-decoration: underline 2px rgb(255, 145, 0);
 }
 .imageGrid {
   display: flex;
   justify-content: center;
 }
 .imageGridItem img {
-  width: 500px;
-  height: 90vh;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
   border-radius: 10px;
+}
+@media (max-width: 1200px) {
+  .sidebar {
+      width: 90%;
+  }
+  .header {
+      font-size: 1.5rem;
+  }
+  .subheader {
+      font-size: 1.1rem;
+  }
+}
+@media (max-width: 992px) {
+  .sidebar {
+      width: 80%;
+  }
+  .gridContainer {
+      grid-template-columns: 1fr;
+  }
+  .header {
+      font-size: 1.3rem;
+  }
+  .subheader {
+      font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar {
+      width: 95%;
+  }
+  .header {
+      font-size: 1.2rem;
+  }
+  .subheader {
+      font-size: 0.9rem;
+  }
+}
+@media (max-width: 576px) {
+  .sidebar {
+      width: 100%;
+      padding: 0.5rem;
+  }
+  .header {
+      font-size: 1rem;
+  }
+  .subheader {
+      font-size: 0.8rem;
+  }
+  .dropdownButton, .searchInput {
+      padding: 0.4rem;
+      font-size: 0.9rem;
+  }
+  .button {
+      padding: 0.4rem;
+      font-size: 0.9rem;
+  }
 }

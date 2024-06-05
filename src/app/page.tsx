@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ImageSlider from './components/ImageSlider/ImageSlider';
 import Topbar from './components/Topbar/Topbar';
 import SimpleSlider from "./components/SimpleSlider/SimpleSlider";
@@ -10,15 +9,14 @@ import Footer from './components/Footer/Footer';
 
 export default function Home() {
   return (
-   <main>
-    <Topbar/>
-    <ImageSlider/>
-    <SimpleSlider/>
-    <RecentBar recentAds={[]}/>
-    <TwoHeaders/>
-    <ItemBar/>
-    <Footer/>
-    
-   </main>
+    <div>
+      <Topbar/>
+      <ImageSlider/>
+      <SimpleSlider/>
+      <RecentBar recentAds={[]}/>
+      <TwoHeaders/>
+      <ItemBar/>
+      <Footer />
+    </div>
   );
 }

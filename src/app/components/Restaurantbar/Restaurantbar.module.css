@@ -1,96 +1,189 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #443737;
-    color: rgb(211, 206, 206);
-    padding: 1rem;
-    height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #443737;
+  color: rgb(228, 223, 223);
+  padding: 1rem;
+  height: 40vh;
+}
+.left {
+  display: flex;
+  align-items: center;
+}
+.autoAds {
+  font-weight: bold;
+  margin-left: 1rem;
+}
+.home {
+  color: rgb(255, 123, 0);
+  text-decoration: none;
+  font-size: 26px;
+  cursor: pointer;
+  font-family: 800;
+}
+.home:hover {
+  color: rgb(247, 247, 247);
+}
+.center {
+  flex-grow: 1;
+  text-align: center;
+}
+.imageContainer {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+.logo {
+  width: 220px;
+  height: 150px;
+  border-radius: 50%;
+  margin-left: 15rem;
+}
+.name {
+  font-weight: 900;
+  font-size: 1.8rem;
+  display: relative;
+  margin-bottom: auto;
+}
+.subtitle {
+  font-size: 1rem;
+  margin-bottom: auto;
+  font-weight: 800;
+}
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.phoneNumber {
+  margin-right: 1rem;
+  font-weight: bold;
+  font-size: x-large;
+}
+.userIcon {
+  width: 220px;
+  height: 200px;
+  border-radius: 50%;
+  border-right: none;
+}
+.more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: x-large;
+  margin-top: auto;
+  margin-right: 3rem;  
+}
+@media (max-width: 1200px) {
+  .navbar {
+      height: auto;
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1rem;
   }
-  
-  .left {
-    display: flex;
-    align-items: center;
-  }
-  
-  .autoAds {
-    font-weight: bold;
-     margin-left: 1rem;
-  }
-  
-  .home {
-   
-    color: rgb(255, 123, 0);
-    text-decoration: none;
-    font-size: 26px;
-    cursor: pointer;
-    font-family: 800;
-
-  }
-  .home:hover{
-    color: rgb(247, 247, 247);
-  }
-  .center {
-    flex-grow: 1;
-    text-align: center;
-  }
-  
-  .imageContainer {
-    display: flex;
-    align-items: center;
-    
-    
-    border-radius: 5px;
-  }
-  
   .logo {
-    width: 220px;
-    height: 150px;
-    border-radius: 50%;
-    margin-left: 15rem;
+      margin-left: 0;
   }
-  
-  .name {
-    font-weight: 900;
-    font-size: 1.8rem;
-    display: relative;
-    margin-bottom: auto;
-    
-  
-  }
-  
-  .subtitle {
-    font-size: 1rem;
-    margin-bottom: auto;
-    font-weight: 800;
-  }
-  
-  .right {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  
   .phoneNumber {
-    margin-right: 1rem;
-    font-weight: bold;
-    font-size: x-large;
+      font-size: large;
   }
-  
+  .name {
+      font-size: 1.6rem;
+  }
   .userIcon {
-    width: 220px;
-    height: 200px;
-    border-radius: 50%;
-    border-right: none;
+      width: 180px;
+      height: 180px;
   }
-  .more{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: x-large;
-    margin-top: auto;
-    margin-right: 3rem;
-    
+  .more {
+      font-size: large;
+      margin-right: 0;
   }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+      height: auto;
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1rem;
+  }
+  .logo {
+      margin-left: 0;
+  }
+  .phoneNumber {
+      font-size: medium;
+  }
+  .name {
+      font-size: 1.4rem;
+  }
+  .userIcon {
+      width: 150px;
+      height: 150px;
+  }
+  .more {
+      font-size: medium;
+      margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      height: auto;
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1rem;
+  }
+  .logo {
+      margin-left: 0;
+  }
+  .phoneNumber {
+      font-size: small;
+  }
+  .name {
+      font-size: 1.2rem;
+  }
+  .userIcon {
+      width: 130px;
+      height: 130px;
+  }
+  .more {
+      font-size: small;
+      margin-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+      height: auto;
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem 0.5rem;
+  }
+  .left, .right, .center {
+      flex-direction: column;
+      align-items: center;
+  }
+  .logo {
+      width: 100px;
+      height: 100px;
+  }
+  .name {
+      font-size: 1rem;
+  }
+  .phoneNumber {
+      font-size: small;
+      margin: 0.5rem 0;
+  }
+  .userIcon {
+      width: 100px;
+      height: 100px;
+  }
+  .more {
+      font-size: small;
+      margin-right: 0;
+      text-align: center;
+  }
+}

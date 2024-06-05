@@ -1,8 +1,8 @@
 'use client';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './StoreImage.module.css';
-import { FaChevronLeft, FaChevronRight, FaUser } from 'react-icons/fa';
+import { FaUser } from 'react-icons/fa';
 
 interface Item {
   id: number;
@@ -12,74 +12,20 @@ interface Item {
   cost: string;
   poster: string;
 }
-
 interface ItemsBarProps {
   items: Item[];
 }
-
-const PropertiesImage: React.FC<ItemsBarProps> = ({ items = [] }) => {
-  const [currentSlide, setCurrentSlide] = useState<{ [key: number]: number }>(
-    items.reduce((acc, item) => {
-      acc[item.id] = 0;
-      return acc;
-    }, {} as { [key: number]: number })
-  );
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 20;
-  const totalPages = Math.ceil(items.length / itemsPerPage);
-
-  const nextSlide = (itemId: number, imagesLength: number) => {
-    setCurrentSlide((prev) => ({
-      ...prev,
-      [itemId]: (prev[itemId] + 1) % imagesLength,
-    }));
-  };
-
-  const prevSlide = (itemId: number, imagesLength: number) => {
-    setCurrentSlide((prev) => ({
-      ...prev,
-      [itemId]: (prev[itemId] - 1 + imagesLength) % imagesLength,
-    }));
-  };
-
-  const paginate = (pageNumber: number) => {
-    setCurrentPage(pageNumber);
-  };
-
-  const currentItems = items.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  );
-
+const StoreImage: React.FC<ItemsBarProps> = ({ items = [] }) => {
   return (
     <div>
       <div className={styles.itemsBar}>
-        {currentItems.map((item) => (
+        {items.map((item) => (
           <div key={item.id} className={styles.card}>
             <div className={styles.imageSlider}>
               {item.images.length > 0 && (
-                <>
-                  <Image
-                    src={`/images/${item.images[currentSlide[item.id] || 0]}`}
-                    alt={item.name}
-                    className={styles.image}
-                    width={300}
-                    height={200}
-                  />
-                  <button
-                    className={`${styles.sliderButton} ${styles.prevButton}`}
-                    onClick={() => prevSlide(item.id, item.images.length)}
-                  >
-                    <FaChevronLeft />
-                  </button>
-                  <button
-                    className={`${styles.sliderButton} ${styles.nextButton}`}
-                    onClick={() => nextSlide(item.id, item.images.length)}
-                  >
-                    <FaChevronRight />
-                  </button>
-                </>
+                <Image src={item.images[0]} alt={item.name}
+                  className={styles.image}
+                  width={300} height={200} layout="responsive"/>
               )}
             </div>
             <h2 className={styles.name}>{item.name}</h2>
@@ -93,19 +39,7 @@ const PropertiesImage: React.FC<ItemsBarProps> = ({ items = [] }) => {
           </div>
         ))}
       </div>
-      <div className={styles.pagination}>
-        {[...Array(totalPages)].map((_, i) => (
-          <button
-            key={i}
-            className={`${styles.pageButton} ${currentPage === i + 1 ? styles.active : ''}`}
-            onClick={() => paginate(i + 1)}
-          >
-            {i + 1}
-          </button>
-        ))}
-      </div>
     </div>
   );
 };
-
-export default PropertiesImage;
+export default StoreImage;

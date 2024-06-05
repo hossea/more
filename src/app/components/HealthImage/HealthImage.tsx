@@ -12,11 +12,9 @@ interface Item {
   cost: string;
   poster: string;
 }
-
 interface ItemsBarProps {
   items: Item[];
 }
-
 const HealthImage: React.FC<ItemsBarProps> = ({ items = [] }) => {
   const [currentSlide, setCurrentSlide] = useState<{ [key: number]: number }>(
     items.reduce((acc, item) => {
@@ -24,7 +22,6 @@ const HealthImage: React.FC<ItemsBarProps> = ({ items = [] }) => {
       return acc;
     }, {} as { [key: number]: number })
   );
-
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 20;
   const totalPages = Math.ceil(items.length / itemsPerPage);
@@ -42,16 +39,13 @@ const HealthImage: React.FC<ItemsBarProps> = ({ items = [] }) => {
       [itemId]: (prev[itemId] - 1 + imagesLength) % imagesLength,
     }));
   };
-
   const paginate = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
-
   const currentItems = items.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
-
   return (
     <div>
       <div className={styles.itemsBar}>
@@ -61,22 +55,17 @@ const HealthImage: React.FC<ItemsBarProps> = ({ items = [] }) => {
               {item.images.length > 0 && (
                 <>
                   <Image
-                    src={`/images/${item.images[currentSlide[item.id] || 0]}`}
-                    alt={item.name}
-                    className={styles.image}
-                    width={300}
-                    height={200}
+                    src={item.images[currentSlide[item.id] || 0]} alt={item.name}
+                    className={styles.image} width={300} height={200} priority
                   />
                   <button
                     className={`${styles.sliderButton} ${styles.prevButton}`}
-                    onClick={() => prevSlide(item.id, item.images.length)}
-                  >
+                    onClick={() => prevSlide(item.id, item.images.length)}>
                     <FaChevronLeft />
                   </button>
                   <button
                     className={`${styles.sliderButton} ${styles.nextButton}`}
-                    onClick={() => nextSlide(item.id, item.images.length)}
-                  >
+                    onClick={() => nextSlide(item.id, item.images.length)} >
                     <FaChevronRight />
                   </button>
                 </>
@@ -98,8 +87,7 @@ const HealthImage: React.FC<ItemsBarProps> = ({ items = [] }) => {
           <button
             key={i}
             className={`${styles.pageButton} ${currentPage === i + 1 ? styles.active : ''}`}
-            onClick={() => paginate(i + 1)}
-          >
+            onClick={() => paginate(i + 1)}>
             {i + 1}
           </button>
         ))}
@@ -107,5 +95,4 @@ const HealthImage: React.FC<ItemsBarProps> = ({ items = [] }) => {
     </div>
   );
 };
-
 export default HealthImage;

@@ -7,13 +7,15 @@ const RestaurantSidebar: React.FC = () => {
     return (
         <div className={styles.gridcontainer}>
         <div className={styles.sidebar}>
-            <h1 className={styles.header}>Find Your Property</h1>
+            <h1 className={styles.header}>Find Your Restaurant</h1>
             <div className={styles.dropdownContainer}>
-                <h2 className={styles.subheader}>Property Type</h2>
+                <h2 className={styles.subheader}>Restaurant Type</h2>
                 <select className={styles.dropdownButton}>
-                    <option value="house">House</option>
-                    <option value="apartment">Apartment</option>
-                    <option value="condo">Condo</option>
+                    <option value="house">Meals/Food</option>
+                    <option value="apartment">Pizza</option>
+                    <option value="condo">Sushi</option>
+                    <option value="apartment">Burgers</option>
+                    <option value="condo">Pilau Rice</option>
                 </select>
             </div>
             <div className={styles.searchContainer}>
@@ -30,41 +32,44 @@ const RestaurantSidebar: React.FC = () => {
                 <div className={styles.gridItem}>
                     <h2 className={styles.subheader}>Location</h2>
                     <select className={styles.dropdownButton}>
-                        <option value="new-york">New York</option>
-                        <option value="los-angeles">Los Angeles</option>
-                        <option value="chicago">Chicago</option>
+                        <option value="new-york">Nairobi</option>
+                        <option value="los-angeles"> Nakuru</option>
+                        <option value="chicago">Mombasa</option>
+                        <option value="new-york">Naivasha</option>
+                        <option value="los-angeles">Eldoret</option>
+                        <option value="chicago">Kitale</option>
                     </select>
                 </div>
                 <div className={styles.gridItem}>
                     <h2 className={styles.subheader}>Price Range</h2>
                     <select className={styles.dropdownButton}>
-                        <option value="0-100k">$0 - $100k</option>
-                        <option value="100k-500k">$100k - $500k</option>
-                        <option value="500k-1M">$500k - $1M</option>
+                        <option value="0-100k">$0 - $80</option>
+                        <option value="100k-500k">$90 - $140</option>
+                        <option value="500k-1M">$145 - $400</option>
                     </select>
                 </div>
                 <div className={styles.gridItem}>
                     <h2 className={styles.subheader}>Price Range</h2>
                     <select className={styles.dropdownButton}>
-                        <option value="0-100k">$0 - $100k</option>
-                        <option value="100k-500k">$100k - $500k</option>
-                        <option value="500k-1M">$500k - $1M</option>
+                        <option value="0-100k">$0 - $100</option>
+                        <option value="100k-500k">$100 - $500</option>
+                        <option value="500k-1M">$500 - $700</option>
                     </select>
                 </div>
                 <div className={styles.gridItem}>
                     <h2 className={styles.subheader}>Price Range</h2>
                     <select className={styles.dropdownButton}>
-                        <option value="0-100k">$0 - $100k</option>
-                        <option value="100k-500k">$100k - $500k</option>
-                        <option value="500k-1M">$500k - $1M</option>
+                        <option value="0-100k">$0 - $100</option>
+                        <option value="100k-500k">$102 - $502</option>
+                        <option value="500k-1M">$500 - $900</option>
                     </select>
                 </div>
                 <div className={styles.gridItem}>
                     <h2 className={styles.subheader}>Price Range</h2>
                     <select className={styles.dropdownButton}>
-                        <option value="0-100k">$0 - $100k</option>
-                        <option value="100k-500k">$100k - $500k</option>
-                        <option value="500k-1M">$500k - $1M</option>
+                        <option value="0-100k">$0 - $101</option>
+                        <option value="100k-500k">$102 - $502</option>
+                        <option value="500k-1M">$508 - $1000</option>
                     </select>
                 </div>
                 <div className={styles.gridItem}>

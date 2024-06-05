@@ -1,48 +1,200 @@
-.recentBar {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 400px;
-    margin: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .heading {
-    margin-bottom: 20px;
-    font-family: sans-serif;
-    font-weight: 800;
-    font-size: 50px;
-    text-align: center;
-    color: #000000;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #443737;
+  color: rgb(211, 206, 206);
+  padding: 1rem;
+  height: auto;
+  flex-wrap: wrap;
+}
 
+.left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.autoAds {
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.home {
+  color: rgb(255, 123, 0);
+  text-decoration: none;
+  font-size: 26px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+.home:hover {
+  color: rgb(247, 247, 247);
+}
+
+.center {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.logo {
+  width: 220px;
+  height: 150px;
+  border-radius: 50%;
+  margin-left: 15rem;
+}
+
+.name {
+  font-weight: 900;
+  font-size: 1.8rem;
+  position: relative;
+  margin-bottom: auto;
+}
+
+.subtitle {
+  font-size: 1rem;
+  margin-bottom: auto;
+  font-weight: 800;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.phoneNumber {
+  margin-right: 1rem;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.userIcon {
+  width: 220px;
+  height: 200px;
+  border-radius: 50%;
+  border-right: none;
+}
+
+.more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: x-large;
+  margin-top: auto;
+  margin-right: 3rem;  
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .navbar {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1rem;
   }
-  
-  .adList {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  .logo {
+      margin-left: 0;
   }
-  
-  .adItem {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+  .phoneNumber {
+      font-size: large;
   }
-  
-  .adItem:last-child {
-    border-bottom: none;
+  .name {
+      font-size: 1.6rem;
   }
-  
-  .adTitle {
-    font-size: 1rem;
-    color: #555;
+  .userIcon {
+      width: 180px;
+      height: 180px;
   }
-  
-  .adTime {
-    font-size: 0.875rem;
-    color: #999;
+  .more {
+      font-size: large;
+      margin-right: 0;
   }
-  
+}
+
+@media (max-width: 992px) {
+  .navbar {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1rem;
+  }
+  .logo {
+      margin-left: 0;
+  }
+  .phoneNumber {
+      font-size: medium;
+  }
+  .name {
+      font-size: 1.4rem;
+  }
+  .userIcon {
+      width: 150px;
+      height: 150px;
+  }
+  .more {
+      font-size: medium;
+      margin-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1rem;
+  }
+  .logo {
+      margin-left: 0;
+  }
+  .phoneNumber {
+      font-size: small;
+  }
+  .name {
+      font-size: 1.2rem;
+  }
+  .userIcon {
+      width: 130px;
+      height: 130px;
+  }
+  .more {
+      font-size: small;
+      margin-right: 0;
+  }
+}
+@media (max-width: 576px) {
+  .navbar {
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem 0.5rem;
+  }
+  .left, .right, .center {
+      flex-direction: column;
+      align-items: center;
+  }
+  .logo {
+      width: 100px;
+      height: 100px;
+  }
+  .name {
+      font-size: 1rem;
+  }
+  .phoneNumber {
+      font-size: small;
+      margin: 0.5rem 0;
+  }
+  .userIcon {
+      width: 100px;
+      height: 100px;
+  }
+  .more {
+      font-size: small;
+      margin-right: 0;
+      text-align: center;
+  }
+}

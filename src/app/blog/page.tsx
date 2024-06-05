@@ -5,7 +5,7 @@ const Blog: React.FC = () => {
   return (
     <div>
       <Topbar />
-      <h1>Blog Page</h1>
+      <h1></h1>
       <p>Welcome to the Blog page. Here you will find various blog posts and articles.</p>
     </div>
   );

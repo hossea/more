@@ -1,19 +1,36 @@
 .container {
-    margin-left: 20px;
-    margin-top: 20px;
+  margin-left: 10px; 
+  margin-top: 10px; 
+}
+
+.smallHeader {
+  font-size: 20px;
+  color: #f00505;
+  margin-left: 20px; 
+}
+
+.bigHeader {
+  font-size: 42px;
+  color: #000000;
+  margin-left: 20px; 
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    margin-left: 5px; 
+    margin-top: 5px; 
   }
-  
+
   .smallHeader {
-    font-size: 24px; 
-    color: #f00505; 
-    margin-left: 40px;
+    font-size: 18px; 
+    margin-left: 10px; 
   }
-  
+
   .bigHeader {
-    font-size: 56px; 
-    color: #000000; 
-    margin-left: 40px;
-    font-weight: 700;
-    font-family: sans-serif;
+    font-size: 36px; 
+    margin-left: 10px;
   }
-  
+}

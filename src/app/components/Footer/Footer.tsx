@@ -1,4 +1,4 @@
-// Footer.tsx
+
 import React from 'react';
 import styles from './Footer.module.css';
 import { FaApple, FaGooglePlay, FaInstagram, FaFacebook, FaLinkedin, FaTwitter, FaPinterest, FaTiktok } from 'react-icons/fa';

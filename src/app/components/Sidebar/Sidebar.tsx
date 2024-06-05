@@ -11,9 +11,11 @@ const Sidebar: React.FC = () => {
             <div className={styles.dropdownContainer}>
                 <h2 className={styles.subheader}>Property Type</h2>
                 <select className={styles.dropdownButton}>
-                    <option value="house">House</option>
-                    <option value="apartment">Apartment</option>
-                    <option value="condo">Condo</option>
+                    <option value="house">Cars</option>
+                    <option value="apartment">Toyota</option>
+                    <option value="condo">Isuzu</option>
+                    <option value="apartment">Toyota1</option>
+                   
                 </select>
             </div>
             <div className={styles.searchContainer}>
